@@ -1,0 +1,12 @@
+{
+  "name": "To-Do-App-with-React",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gkalarus/To-Do-App-with-React.git",
+  "author": "Grzegorz Kalarus <kalarus.g@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  }
+}
