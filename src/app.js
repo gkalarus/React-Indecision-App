@@ -1,3 +1,16 @@
+class ToDoApp extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Action />
+        <Options />
+        <AddOption />
+      </div>
+    );
+  }
+}
+
 class Header extends React.Component {
   render() {
     return (
@@ -21,7 +34,22 @@ class Action extends React.Component {
 
 class Options extends React.Component {
   render() {
-    return <div>Options component here</div>;
+    return (
+      <div>
+        Options component here
+        <Option />
+      </div>
+    );
+  }
+}
+
+class Option extends React.Component {
+  render() {
+    return (
+      <div>
+        Option component here
+      </div>
+    );
   }
 }
 
@@ -36,13 +64,6 @@ class AddOption extends React.Component {
   }
 }
 
-const jsx = (
-  <div>
-    <Header />
-    <Action />
-    <Options />
-    <AddOption />
-  </div>
-);
 
-ReactDOM.render(jsx, document.getElementById("app"));
+
+ReactDOM.render(<ToDoApp />, document.getElementById("app"));
