@@ -3,11 +3,13 @@ import AddOption from './AddOptions';
 import Header from './Header';
 import Action from './Action';
 import Options from './Options';
+import OptionModal from './OptionModal.js'
 
 class ToDoApp extends React.Component {
   
   state = {
-    options: []
+    options: [],
+    selectedOption: undefined
   }
 
   handleDeleteOptions = () => {
@@ -22,7 +24,10 @@ class ToDoApp extends React.Component {
   
   handlePick = () => {
     const random = Math.floor(Math.random()*this.state.options.length);
-    alert(this.state.options[random])
+    const option = this.state.options[random]
+    this.setState(() => ({
+      selectedOption: option
+    }))
   }
 
   handleAddOption = (option) => {
@@ -34,6 +39,12 @@ class ToDoApp extends React.Component {
 
     this.setState((prevState)=>({options: prevState.options.concat(option)}))
 
+  }
+
+  handleClearSelectedOption = () => {
+    this.setState(() => ({
+      selectedOption: undefined
+    }))
   }
   
   componentDidMount() {
@@ -77,6 +88,10 @@ class ToDoApp extends React.Component {
         />
         <AddOption 
           handleAddOption={this.handleAddOption}
+        />
+        <OptionModal 
+          selectedOption={this.state.selectedOption}
+          handleClearSelectedOption={this.handleClearSelectedOption}
         />
       </div>
     );
