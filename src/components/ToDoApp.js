@@ -82,18 +82,21 @@ class ToDoApp extends React.Component {
         <Header subtitle={subtitle}/>
         <div className="container">
           <Action handlePick={this.handlePick} hasOptions={this.state.options.length > 0}/>
-          <Options 
+          <div className="widget">
+            <Options 
             options={this.state.options}
             handleDeleteOptions={this.handleDeleteOptions}
             handleDeleteOption={this.handleDeleteOption}
-          />
-          <AddOption 
-            handleAddOption={this.handleAddOption}
-          />
-          <OptionModal 
-            selectedOption={this.state.selectedOption}
-            handleClearSelectedOption={this.handleClearSelectedOption}
-          />
+            />
+            <AddOption 
+              handleAddOption={this.handleAddOption}
+            />
+            <OptionModal 
+              selectedOption={this.state.selectedOption}
+              handleClearSelectedOption={this.handleClearSelectedOption}
+            />
+          </div>
+
         </div>
       </div>
     );
