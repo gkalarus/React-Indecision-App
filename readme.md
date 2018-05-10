@@ -1,4 +1,4 @@
-# ToDoAppWithReact
+#React-Indecision App
 
 ## Live preview
 
