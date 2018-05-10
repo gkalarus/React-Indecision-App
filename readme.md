@@ -1,4 +1,4 @@
-#React-Indecision App
+# React-Indecision App
 
 ## Live preview
 
