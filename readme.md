@@ -5,7 +5,7 @@ The Indecision App, at its core is an application that helps you decide which ta
 
 ## Live preview
 
-Here you can find a link to the live preview of of this application:
+Here you can find a link to the live preview of this application:
 https://to-do-app-with-react-2.herokuapp.com/
 
 ### Techologies used
